@@ -1,0 +1,61 @@
+#overlaymain {
+	position: absolute;
+	left: 10vw;
+	top: 10vh;
+	width: 80vw;
+	height: 80vh;
+	z-index: 2;
+	overflow: auto;
+	padding: 2vw;
+	animation-name: anim;
+	animation-duration: 0.3s;
+	box-shadow: 0 0 20px black;
+}
+
+@keyframes anim {
+	from {
+		top: -10vh;
+		height: 0;
+		opacity: 0;
+	}
+	to {
+	}
+}
+
+#cross {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	background-color: transparent;
+	border: none;
+	transition: color 0.2s, text-shadow 0.2s;
+	z-index: 1;
+}
+
+#cross:hover {
+	color: red;
+	text-shadow: 0 0 2px green;
+}
+
+#unmount {
+	position: absolute;
+	left: 10vw;
+	top: 10vh;
+	width: 80vw;
+	height: 80vh;
+	z-index: 2;
+	overflow: auto;
+	padding: 2vw;
+	animation-name: anim2;
+	animation-duration: 0.4s;
+}
+
+@keyframes anim2 {
+	from {
+	}
+	to {
+		opacity: 0;
+		height: 0;
+		top: -10vh;
+	}
+}

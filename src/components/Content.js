@@ -5,8 +5,10 @@ import News from './News.js';
 class Content extends Component {
 	constructor(props) {
 		super(props);
+
 		this.state = {
-			NewsIDs: [] //stoers IDs of the news
+			NewsIDs: [], //stoers IDs of the news
+			searchText: ''
 		};
 	}
 
@@ -25,10 +27,15 @@ class Content extends Component {
 			);
 	};
 
+	searchHandler = (event, reset = 'n') => {
+		console.log(event.target.value);
+		if (event.key == 'Enter') this.setState({ searchText: event.target.value });
+	};
+
 	render() {
 		//console.log('NewsIds: ', this.state.NewsIds);
 		let dispNews = this.state.NewsIDs.map((id, index) => {
-			return <News id={id} key={index} />;
+			return <News id={id} key={index} searchText={this.state.searchText} />;
 		});
 		if (this.state.NewsIDs.length == 0) {
 			dispNews = (
@@ -40,7 +47,20 @@ class Content extends Component {
 			);
 		}
 
-		return <div id={styles.contentMain}>{dispNews}</div>;
+		return (
+			<div id={styles.contentMain}>
+				<input
+					onReset={(ev) => this.searchHandler(ev, 'r')}
+					onKeyDown={this.searchHandler}
+					type="search"
+					id={styles.searchBox}
+					placeholder="&#xF002;  Search..."
+					className="form-control"
+				/>
+
+				{dispNews}
+			</div>
+		);
 	}
 }
 

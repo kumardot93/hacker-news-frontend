@@ -2,16 +2,29 @@
 	position: relative;
 	padding: 0;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, 1fr);
+	grid-template-columns: repeat(10, minmax(9vw, 9.4vw));
+	grid-auto-rows: 40px;
 	grid-auto-flow: dense;
 	max-width: 100vw;
+	align-items: flex-start;
+	/* overflow: hidden; */
 	margin-bottom: 40px;
+	grid-column-gap: 0.5vw;
+	/* grid-row-gap: 10px; */
+	padding: 0.3vw;
 }
 
 .spinnerCont {
-	display: table-cell;
-	height: 85vh;
+	position: absolute;
 	width: 100vw;
-	vertical-align: middle;
+	top: 35vh;
 	text-align: center;
+}
+
+#searchBox {
+	position: absolute;
+	top: -50px;
+	right: 10px;
+	width: 250px;
+	font-family: Arial, FontAwesome;
 }
