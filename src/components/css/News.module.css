@@ -1,0 +1,28 @@
+.newsMain {
+	position: relative;
+	display: inline-block;
+	max-width: 32vw;
+	min-width: 15vw;
+	min-height: 15vh;
+	overflow: hidden;
+	margin: 0.65vw;
+	background-color: teal;
+	padding: 4px;
+}
+
+.spinner {
+}
+.spinnerCont {
+	display: table-cell;
+	height: inherit;
+	width: inherit;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.author {
+	text-align: right;
+}
+.authorText {
+	color: darkslategray;
+}

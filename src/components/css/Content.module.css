@@ -1,0 +1,17 @@
+#contentMain {
+	position: relative;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 1fr);
+	grid-auto-flow: dense;
+	max-width: 100vw;
+	margin-bottom: 40px;
+}
+
+.spinnerCont {
+	display: table-cell;
+	height: 85vh;
+	width: 100vw;
+	vertical-align: middle;
+	text-align: center;
+}

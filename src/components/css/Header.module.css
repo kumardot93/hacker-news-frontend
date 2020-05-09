@@ -1,0 +1,12 @@
+#headText {
+	text-align: center;
+	font-family: 'Times New Roman', Times, serif;
+	background-color: wheat;
+	padding-bottom: 3px;
+}
+
+@media only screen and (max-width: 800px) {
+	#headText {
+		font-size: 10vw;
+	}
+}
