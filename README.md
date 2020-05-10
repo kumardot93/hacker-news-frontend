@@ -1,68 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+HACKER-NEWS-FRONTEND
 
-## Available Scripts
+To setup the project(host):
+    -   host the /build folder. This folder contains the production version of this web app.
 
-In the project directory, you can run:
+To edit the application/code:
+    -   create a directory and clone this project
+    -   execute command npm install
+    -   install 'redux' and 'react-redux': npm install redux and npm install react-redux
+    -   You are all set to start working on this project
 
-### `npm start`
+There is two versios of this project:
+    -   Master branch contains the first version
+    -   Second version is in multiple-pages
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Main difference between version 1 and 2 is that version 2 uses redux for state management and pagination while fist version dosent'n
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Version 2 is more optomised in performance.
 
-### `npm test`
+In this project a large number of fetch request is made during the start. This large number of fetch request causes performance issue initially when fetch request are made. This performance issue also causes other elements of the UI to behave abnormally. After all the fetch requests are made the website functions normally. 
+In version 2 that permormance issue is optomised by using pagination and redux state managemnt. The pagination restricts the UI the make only a certain no. of request(in this case 30) by limiting the content of the webpage. Also, once a news data is loaded it rests on the webapp even during a change of the page. Hence, when the user visit a already visited page the data is already available thus reducing the network usage. 
+The trade off here is between amount of content on the page vs no. of getch requests.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+One possible solution is allow the api to serve a range of news in a single request.
+Eg. If I need news for id1, id2, ..., idk then i will just pass this list to the server and the server will serve news for the whole list at once. Thus, reducing the number of the getch requests.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Both the versions are hosted usning github pages:
+    -   version1 : https://kumardot93.github.io/hacker-news-frontend/
+    -   version2 : https://kumardot93.github.io/hacker-news-frontend/v2/
