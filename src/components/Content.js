@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import styles from './css/Content.module.css';
 import News from './News.js';
 
+//redux state management
+// import Store from './../redux/Store.js';
+// import { Provider } from 'react-redux';
+
 class Content extends Component {
 	constructor(props) {
 		super(props);
