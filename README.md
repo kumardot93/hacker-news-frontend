@@ -4,13 +4,19 @@ To set up the project(host):
     -   host the /build folder. This folder contains the production version of this web app.
 
 To edit the application/code:
+
     -   create a directory and clone this project
+
     -   execute command npm install
+
     -   install 'redux' and 'react-redux': npm install redux, and npm install react-redux
+
     -   You are all set to start working on this project
 
 There are two versions of this project:
+
     -   Master branch contains the first version
+
     -   The second version is in multiple-pages
 
 The main difference between version 1 and 2 is that version 2 uses redux for state management and pagination while fist version doesn't
@@ -25,5 +31,7 @@ One possible solution allows the API to serve a range of news in a single reques
 Eg. If I need news for id1, id2, ..., idk, then I pass this list to the server, and the server serve news for the whole list at once. Thus, reducing the number of fetch requests.
 
 Both the versions are hosted usning github pages:
+
     -   version1 : https://kumardot93.github.io/hacker-news-frontend/
+    
     -   version2 : https://kumardot93.github.io/hacker-news-frontend/v2/
