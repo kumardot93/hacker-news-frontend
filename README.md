@@ -1,9 +1,10 @@
-HACKER-NEWS-FRONTEND
+# HACKER-NEWS-FRONTEND
 
-To set up the project(host):
+### To set up the project(host):
+
     -   host the /build folder. This folder contains the production version of this web app.
 
-To edit the application/code:
+### To edit the application/code:
 
     -   create a directory and clone this project
 
@@ -13,7 +14,7 @@ To edit the application/code:
 
     -   You are all set to start working on this project
 
-There are two versions of this project:
+### There are two versions of this project:
 
     -   Master branch contains the first version
 
@@ -30,8 +31,8 @@ The trade-off here is between the amount of content on the page vs. no. of fetch
 One possible solution allows the API to serve a range of news in a single request.
 Eg. If I need news for id1, id2, ..., idk, then I pass this list to the server, and the server serve news for the whole list at once. Thus, reducing the number of fetch requests.
 
-Both the versions are hosted usning github pages:
+## Both the versions are hosted usning github pages:
 
     -   version1 : https://kumardot93.github.io/hacker-news-frontend/
-    
+
     -   version2 : https://kumardot93.github.io/hacker-news-frontend/v2/
