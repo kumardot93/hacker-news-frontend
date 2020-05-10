@@ -41,6 +41,8 @@ class News extends Component {
 	Overlay = (date) => {
 		let el = document.getElementById('overlay');
 		el.style.display = 'block';
+		let root = document.getElementById('root');
+		root.classList.add('blurBG');
 		ReactDOM.render(
 			<Overlay title={this.state.data.title} text={this.state.data.text} date={date} by={this.state.data.by} />,
 			el

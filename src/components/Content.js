@@ -27,16 +27,21 @@ class Content extends Component {
 			);
 	};
 
-	searchHandler = (event, reset = 'n') => {
-		console.log(event.target.value);
+	searchHandler = (event) => {
 		if (event.key == 'Enter') this.setState({ searchText: event.target.value });
 	};
 
 	render() {
-		//console.log('NewsIds: ', this.state.NewsIds);
+		// let end = this.state.end;
+		// end = this.state.NewsIDs.length > end ? end : this.state.NewsIDs.length;
+		// let subIds = this.state.NewsIDs.slice(0, end);
+
+		//All the news  from from ids to corrosponding news
 		let dispNews = this.state.NewsIDs.map((id, index) => {
 			return <News id={id} key={index} searchText={this.state.searchText} />;
 		});
+
+		//Spinner if NewsIds are not available
 		if (this.state.NewsIDs.length == 0) {
 			dispNews = (
 				<div className={styles.spinnerCont}>
@@ -50,7 +55,6 @@ class Content extends Component {
 		return (
 			<div id={styles.contentMain}>
 				<input
-					onReset={(ev) => this.searchHandler(ev, 'r')}
 					onKeyDown={this.searchHandler}
 					type="search"
 					id={styles.searchBox}

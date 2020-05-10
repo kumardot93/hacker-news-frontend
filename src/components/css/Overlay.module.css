@@ -1,5 +1,5 @@
 #overlaymain {
-	position: absolute;
+	position: fixed;
 	left: 10vw;
 	top: 10vh;
 	width: 80vw;

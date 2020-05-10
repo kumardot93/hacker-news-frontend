@@ -12,9 +12,23 @@ body::-webkit-scrollbar {
 }
 
 #overlay {
-	position: absolute;
+	position: fixed;
 	height: 100vh;
 	width: 100vw;
 	z-index: 2;
 	display: none;
+}
+
+.blurBG {
+	filter: blur(2.5px);
+	animation: blurAnim 1s;
+}
+
+@keyframes blurAnim {
+	from {
+		filter: blur(0px);
+	}
+	to {
+		filter: blur(2.5px);
+	}
 }
